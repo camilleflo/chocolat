@@ -1,0 +1,160 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+@import "bootstrap/scss/bootstrap";
+
+
+
+body, html {
+    height: 100%;
+}
+
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("chocolat.jpeg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+div.a {
+  text-align: center;
+  font-size: 24px;
+  color: #51281A;
+}
+
+
+.mosaique {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+
+}
+
+.card-img-top {
+ 
+  min-width: 300px;
+  margin-bottom: 2rem;  
+  border-radius: 15px;
+
+}
+
+#grid {
+  display: grid;
+  height: 200px;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(3, 1fr);
+ grid-gap: 20px;
+}
+
+
+.cards {
+ 
+display: grid;
+grid-template-columns: repeat(auto-fill, 250px);
+grid-gap: 1rem;
+ 
+}
+
+.mycard {
+ 
+border: 2px solid #e7e7e7;
+ 
+border-radius: 20px;
+min-width: 300px;
+
+padding: .5rem;
+ 
+}
+
+.card-title {
+  color: black;
+}
+
+
+
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 8em;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block;
+}
+
+.link--kukuri {
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+  line-height: 0.75;
+  color: #b2b0a9;
+}
+
+
+.link--kukuri:hover {
+  color: #b2b0a9;
+}
+
+.link--kukuri::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+  background: #F9F9F9;
+  transform: translate3d(-100%,0,0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link--kukuri:hover::after {
+  transform: translate3d(100%,0,0);
+}
+
+.link--kukuri::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #424242;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s;
+}
+
+.link--kukuri:hover::before {
+  width: 100%;
+}
+
+

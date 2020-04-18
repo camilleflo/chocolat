@@ -1,0 +1,80 @@
+<link href="styles/ihover.css" rel="stylesheet">
+
+<header>
+
+  <div class="RS_sidebar header_top">
+
+   <a class="btn-floating btn-lg btn-pin" type="button" role="button"><i class="fab fa-pinterest"></i></a>
+
+   <a class="btn-floating btn-lg btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a>
+   <a class="btn-floating btn-lg btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i>
+   </a>
+  
+   <!--Twitter-->
+ </div>
+  <a class="btn btn-sm btn-outline-secondary">Sign up</a>
+
+ <div class="container">
+  <a class="link link--kukuri" href="#" data-letters="Chocolat">Chocolat</a>
+  </div>
+  <br>
+  <br>
+</header>
+ 
+<div class="nav-scroller py-1 mb-2">
+  <nav class="nav d-flex justify-center">
+    <a class="p-2 text-muted" href="#">Gâteaux</a>
+    <a class="p-2 text-muted" href="#">Desserts</a>
+    <a class="p-2 text-muted" href="#">Just chocolat</a>
+  </nav>
+</div>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 class="display-4 font-italic">Tout le chocolat</h1>
+    <p class="lead my-3">Viens partager tes meilleures recettes pour tous les fonduss de chocolat !</p>
+    <p><%= link_to "Ajouter votre recette ", new_recette_path %></p>
+  </div>
+</div>
+<br>
+<br>
+<body>
+
+ <div class="container">
+  <div class="row">
+    <% @recettes.each do |recette| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="mycard">
+          <%= image_tag("jordane-mathieu-k7VgPnWFcx8-unsplash/.jpg", :alt => "chocolat", :class => "card-img-top") %>
+          <div class="card-description">
+            <h2><%= recette.name.capitalize %></h2>
+          </div>
+          <%= link_to "Voir cette recette", recette_path(recette), class: "card-link" %>
+        
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
