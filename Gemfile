@@ -40,7 +40,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 5.6.1"
 gem "simple_form"
-gem "better_errors", "~> 2.6"
+gem "better_errors", "~> 2.8"
 gem "bulma-rails", "~> 0.8.0"
 
 group :development, :test do
